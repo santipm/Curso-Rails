@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @titulo %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<ul>
+	<li><%= link_to_unless_current "Inicio", :action=>"index" %></li>
+	<li><%= link_to_unless_current "Servicios", servicios_path(1) %></li>
+	<li><%= link_to_unless_current "Quienes Somos", :action=>"quienes_somos" %></li>
+	<li><%= link_to_unless_current "Contacto", :action=>"contacto" %></li>
+	<li><%= link_to_unless_current "Localización", :action=>"localizacion" %></li>
+	
+</ul>
+<%= yield %>
+<%= button_to "Enviar", servicios_path(1) %>
+
+
+</body>
+</html>

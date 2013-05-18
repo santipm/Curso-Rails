@@ -1,0 +1,11 @@
+<h2> Sección Principal</h2>
+
+
+<h1>Formulario </h1>
+<%= form_tag("home/contacto", :method=>true) do%>
+	<%= label_tag :archivo %>
+	<%= file_field_tag :archivo %>
+	<%= submit_tag "Enviar" %>
+<% end %>
+
+
